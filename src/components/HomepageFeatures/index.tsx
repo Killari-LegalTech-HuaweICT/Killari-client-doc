@@ -4,6 +4,7 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 // Importamos iconos de Tabler
 import { IconBrain, IconShieldLock, IconLayoutDashboard } from '@tabler/icons-react';
+import Translate from '@docusaurus/Translate';
 
 type FeatureItem = {
   title: string;
@@ -13,33 +14,30 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Análisis IA Forense",
+    title: "Huawei ModelArts",
     Icon: IconBrain,
     description: (
-      <>
-        Implementación de algoritmos avanzados mediante <b>Huawei ModelArts</b>{" "}
-        para la detección de inconsistencias en expedientes judiciales.
-      </>
+      <Translate id="homepage.feature.modelarts">
+        Potenciado por Huawei Cloud AI para ejecutar modelos forenses y análisis de expedientes con alta precisión.
+      </Translate>
     ),
   },
   {
-    title: "Seguridad de Grado Legal",
-    Icon: IconShieldLock,
-    description: (
-      <>
-        Gestión de evidencia digital segura utilizando la infraestructura de
-        <b> Huawei Cloud</b>, garantizando la cadena de custodia.
-      </>
-    ),
-  },
-  {
-    title: "Workspace Intuitivo",
+    title: "Electron.js",
     Icon: IconLayoutDashboard,
     description: (
-      <>
-        Interfaz de alta fidelidad construida con <b>Electron y Mantine</b>,
-        optimizada para el flujo de trabajo de fiscales y abogados.
-      </>
+      <Translate id="homepage.feature.electron">
+        Arquitectura de escritorio robusta y multiplataforma, integrando procesos de sistema nativos con web tech.
+      </Translate>
+    ),
+  },
+  {
+    title: "React / Mantine",
+    Icon: IconShieldLock,
+    description: (
+      <Translate id="homepage.feature.react">
+        Interfaz moderna y accesible construida con componentes reactivos y un sistema de diseño consistente.
+      </Translate>
     ),
   },
 ];

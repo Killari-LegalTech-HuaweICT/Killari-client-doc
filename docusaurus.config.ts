@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://Killari-LegalTech-HuaweICT.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Killari-client-doc/',
+  baseUrl: process.env.NODE_ENV === 'production' ? '/Killari-client-doc/' : '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -36,8 +36,16 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'es', // Cambiado a español ya que tu doc es en español
-    locales: ['es'],
+    defaultLocale: 'es', 
+    locales: ['es', 'en'], // Añadimos 'en' para inglés
+    localeConfigs: {
+      es: {
+        label: 'Español',
+      },
+      en: {
+        label: 'English',
+      },
+    },
   },
 
   presets: [
@@ -76,13 +84,13 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          docId: 'project-innovation/introduction', // ID generado por Docusaurus (sin prefijo numérico)
+          docId: 'explanation/project-vision',
           position: 'left',
           label: '🚀 Innovación',
         },
         {
           type: 'doc',
-          docId: 'code-reference/client/main/index', // ID generado por Docusaurus (sin prefijo numérico)
+          docId: 'reference/client/index',
           position: 'left',
           label: '💻 Referencia Técnica',
         },
@@ -91,33 +99,15 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Documentación',
-          items: [
-            { label: 'Estrategia e Innovación', to: '/docs/project-innovation/introduction' },
-            { label: 'Referencia de Código', to: '/docs/code-reference/client/main/index' },
-          ],
-        },
-        {
-          title: 'Tecnologías',
-          items: [
-            { label: 'Huawei ModelArts', href: 'https://www.huaweicloud.com/intl/en-us/product/modelarts.html' },
-            { label: 'Electron.js', href: 'https://www.electronjs.org/' },
-            { label: 'React / Mantine', href: 'https://mantine.dev/' },
-          ],
-        },
-        {
-          title: 'Equipo',
-          items: [
-            { label: 'GitHub Org', href: 'https://github.com/Killari-LegalTech-HuaweICT' },
-          ],
-        },
-      ],
+      links: [],
       copyright: `Copyright © ${new Date().getFullYear()} Killari Project - Huawei ICT Competition. Built with Docusaurus.`,
     },
     prism: {

@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.mainSidebar.category.🚀 Innovación y Conceptos": {
+    "message": "🚀 Innovación y Conceptos",
+    "description": "The label for category '🚀 Innovación y Conceptos' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.🚀 Innovación y Conceptos.link.generated-index.title": {
+    "message": "Innovación en Killari",
+    "description": "The generated-index page title for category '🚀 Innovación y Conceptos' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.🚀 Innovación y Conceptos.link.generated-index.description": {
+    "message": "Fundamentos teóricos, arquitectura global y el uso de IA en el ecosistema legal.",
+    "description": "The generated-index page description for category '🚀 Innovación y Conceptos' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.🏁 Tutoriales": {
+    "message": "🏁 Tutoriales",
+    "description": "The label for category '🏁 Tutoriales' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.🛠️ Guías Prácticas": {
+    "message": "🛠️ Guías Prácticas",
+    "description": "The label for category '🛠️ Guías Prácticas' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.📚 Referencia Técnica": {
+    "message": "📚 Referencia Técnica",
+    "description": "The label for category '📚 Referencia Técnica' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.📚 Referencia Técnica.link.generated-index.title": {
+    "message": "Referencia del Código",
+    "description": "The generated-index page title for category '📚 Referencia Técnica' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.📚 Referencia Técnica.link.generated-index.description": {
+    "message": "Documentación técnica de los procesos de la API y el Cliente de Escritorio.",
+    "description": "The generated-index page description for category '📚 Referencia Técnica' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.API Engine": {
+    "message": "API Engine",
+    "description": "The label for category 'API Engine' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Cliente (Electron)": {
+    "message": "Cliente (Electron)",
+    "description": "The label for category 'Cliente (Electron)' in sidebar 'mainSidebar'"
+  },
+  "sidebar.mainSidebar.category.Renderer — Introducción": {
+    "message": "Renderer — Introducción",
+    "description": "The label for category 'Renderer — Introducción' in sidebar 'mainSidebar'"
+  }
+}

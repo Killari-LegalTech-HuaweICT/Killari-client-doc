@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "KILLARI",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Killari Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.🚀 Innovación": {
+    "message": "🚀 Innovación",
+    "description": "Navbar item with label 🚀 Innovación"
+  },
+  "item.label.💻 Referencia Técnica": {
+    "message": "💻 Referencia Técnica",
+    "description": "Navbar item with label 💻 Referencia Técnica"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
