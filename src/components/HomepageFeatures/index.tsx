@@ -1,56 +1,59 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+// Importamos iconos de Tabler
+import { IconBrain, IconShieldLock, IconLayoutDashboard } from '@tabler/icons-react';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Icon: React.ElementType;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Análisis IA Forense",
+    Icon: IconBrain,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Implementación de algoritmos avanzados mediante <b>Huawei ModelArts</b>{" "}
+        para la detección de inconsistencias en expedientes judiciales.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Seguridad de Grado Legal",
+    Icon: IconShieldLock,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Gestión de evidencia digital segura utilizando la infraestructura de
+        <b> Huawei Cloud</b>, garantizando la cadena de custodia.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Workspace Intuitivo",
+    Icon: IconLayoutDashboard,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Interfaz de alta fidelidad construida con <b>Electron y Mantine</b>,
+        optimizada para el flujo de trabajo de fiscales y abogados.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Icon, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className={clsx("col col--4")}>
+      <div className="text--center feature-icon-wrapper">
+        {/* Renderizamos el icono con el azul eléctrico de Killari */}
+        <Icon size={64} stroke={1.5} className="feature-icon" />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+        <p className={styles.featureDescription}>{description}</p>
       </div>
     </div>
   );

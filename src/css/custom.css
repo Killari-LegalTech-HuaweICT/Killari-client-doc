@@ -5,26 +5,74 @@
  */
 
 /* You can override the default Infima variables here. */
+/* Importar fuente elegante para el logo y títulos */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap');
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Azul Eléctrico Killari (Basado en tu paleta de Mantine) */
+  --ifm-color-primary: #357af6;
+  --ifm-color-primary-dark: #1c64eb;
+  --ifm-color-primary-darker: #125be3;
+  --ifm-color-primary-darkest: #0e4bbd;
+  --ifm-color-primary-light: #548ff7;
+  --ifm-color-primary-lighter: #639af8;
+  --ifm-color-primary-lightest: #92b9fa;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* MODO OSCURO - Exactamente como tu App de Escritorio */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #22d3ee; /* Cyan eléctrico para resaltar en fondo oscuro */
+  --ifm-background-color: #0f172a; /* Fondo principal de tu App */
+  --ifm-navbar-background-color: #1e293b; /* Fondo de tus Cards/Layout */
+  --ifm-card-background-color: #1e293b;
+
+  --ifm-color-primary-dark: #1cb8d1;
+  --ifm-color-primary-darker: #1aaebd;
+  --ifm-color-primary-darkest: #158f9b;
+  --ifm-color-primary-light: #46dbf1;
+  --ifm-color-primary-lighter: #57e0f3;
+  --ifm-color-primary-lightest: #8bebf7;
+
+  --docusaurus-highlighted-code-line-bg: rgba(34, 211, 238, 0.2);
+}
+
+/* Personalización de scrollbars para que combine con el cliente */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Estilo del Logo "KILLARI" */
+.navbar__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Estilo para los iconos de las features */
+.feature-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  color: #22d3ee; /* Azul eléctrico */
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.4));
 }

@@ -1,41 +1,83 @@
-# Website
+# Killari Client Desktop — Documentación / Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+## Español
 
-## Installation
+Este sitio, generado con [Docusaurus](https://docusaurus.io/), documenta el cliente de escritorio construido con Electron para Killari.
 
-```bash
+Puedes clonar este repositorio y ver la documentación de forma local, o consultar la versión publicada en GitHub Pages (la URL pública aparece en la sección "Pages" del repositorio en GitHub).
+
+Clonar y ver localmente:
+
+```bat
+git clone https://github.com/Killari-LegalTech-HuaweICT/Killari-client-doc.git
+cd Killari-client-doc
+REM instalar dependencias (yarn o npm)
 yarn
-```
+REM o
+npm install
 
-## Local Development
-
-```bash
+REM iniciar servidor de desarrollo
 yarn start
+REM o
+npm run start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Construir para producción:
 
-## Build
-
-```bash
+```bat
 yarn build
+REM o
+npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Despliegue en GitHub Pages (si aplica):
 
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
+```bat
+USE_SSH=true yarn deploy  REM usando SSH
+REM o
+GIT_USER=<TuUsuarioGitHub> yarn deploy  REM sin SSH
 ```
 
-Not using SSH:
+Nota: la URL pública de la documentación se puede consultar en GitHub → Settings → Pages del repositorio.
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
+## English
+
+This website, built with [Docusaurus](https://docusaurus.io/), documents the Electron-based desktop client for Killari.
+
+You can clone this repository and view the docs locally, or open the published site on GitHub Pages (the public URL is available under the repository's Pages settings on GitHub).
+
+Clone and view locally:
+
+```bat
+git clone https://github.com/Killari-LegalTech-HuaweICT/Killari-client-doc.git
+cd Killari-client-doc
+REM install dependencies (yarn or npm)
+yarn
+REM or
+npm install
+
+REM start development server
+yarn start
+REM or
+npm run start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Build for production:
+
+```bat
+yarn build
+REM or
+npm run build
+```
+
+Deploy to GitHub Pages (if used):
+
+```bat
+USE_SSH=true yarn deploy  REM using SSH
+REM or
+GIT_USER=<YourGitHubUsername> yarn deploy  REM without SSH
+```
+
+If you host the docs with GitHub Pages, the deploy command will push the built site to the `gh-pages` branch. Check the repository's Pages settings for the exact public URL.
+
+````

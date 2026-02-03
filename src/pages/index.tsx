@@ -11,17 +11,25 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
+          Análisis Legal Inteligente impulsado por <b>Huawei Cloud AI</b>
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            style={{ 
+              backgroundColor: '#22d3ee', 
+              color: '#0f172a', 
+              border: 'none',
+              fontWeight: 'bold'
+            }}
+            to="/docs/project-innovation/introduction">
+            Explorar Innovación - Killari ⚖️
           </Link>
         </div>
       </div>
@@ -29,14 +37,13 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home(): React.JSX.Element {
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="Killari - LegalTech"
+      description="Portal de documentación técnica para el ecosistema LegalTech Killari">
       <HomepageHeader />
-      <main>
+      <main style={{ backgroundColor: '#0f172a' }}>
         <HomepageFeatures />
       </main>
     </Layout>

@@ -1,11 +1,22 @@
+
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
+  background-color: #0f172a;
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.featureDescription {
+  color: rgba(235, 235, 245, 0.6); /* --ev-c-text-2 de tu App */
+}
+
+.featureTitle {
+  color: #ffffff;
+  margin-top: 1rem;
 }

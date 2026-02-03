@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Killari Documentation',
+  tagline: 'LegalTech Innovation with Huawei AI',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,24 +15,29 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://Killari-LegalTech-HuaweICT.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Killari-client-doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Killari-LegalTech-HuaweICT', // Nombre de la Organización
+  projectName: 'Killari-client-doc', // Nombre del Repo
+  // Branch used for deployment (gh-pages will be created by Docusaurus deploy)
+  deploymentBranch: 'gh-pages',
+  // Disable trailing slashes in generated URLs
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es', // Cambiado a español ya que tu doc es en español
+    locales: ['es'],
   },
 
   presets: [
@@ -41,26 +46,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Enlace a edición en tu repo
+          editUrl: 'https://github.com/Killari-LegalTech-HuaweICT/Killari-client-doc/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Desactivado para enfocarnos solo en documentación para el concurso
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,24 +61,33 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'dark', // Killari se ve mejor en modo oscuro por defecto
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'KILLARI', // Texto estilizado vía CSS (Playfair Display)
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Killari Logo',
         src: 'img/logo.svg',
+        className: 'custom-navbar-logo',
+        // ocultamos la imagen si prefieres solo el texto
+        style: { display: 'none' },
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'doc',
+          docId: 'project-innovation/introduction', // ID generado por Docusaurus (sin prefijo numérico)
           position: 'left',
-          label: 'Tutorial',
+          label: '🚀 Innovación',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          type: 'doc',
+          docId: 'code-reference/client/main/index', // ID generado por Docusaurus (sin prefijo numérico)
+          position: 'left',
+          label: '💻 Referencia Técnica',
+        },
+        {
+          href: 'https://github.com/Killari-LegalTech-HuaweICT/Killari-client-doc',
           label: 'GitHub',
           position: 'right',
         },
@@ -99,50 +97,33 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentación',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            { label: 'Estrategia e Innovación', to: '/docs/project-innovation/introduction' },
+            { label: 'Referencia de Código', to: '/docs/code-reference/client/main/index' },
           ],
         },
         {
-          title: 'Community',
+          title: 'Tecnologías',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+            { label: 'Huawei ModelArts', href: 'https://www.huaweicloud.com/intl/en-us/product/modelarts.html' },
+            { label: 'Electron.js', href: 'https://www.electronjs.org/' },
+            { label: 'React / Mantine', href: 'https://mantine.dev/' },
           ],
         },
         {
-          title: 'More',
+          title: 'Equipo',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            { label: 'GitHub Org', href: 'https://github.com/Killari-LegalTech-HuaweICT' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Killari Project - Huawei ICT Competition. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'json', 'typescript'], // Importante para tus docs técnicos
     },
   } satisfies Preset.ThemeConfig,
 };
